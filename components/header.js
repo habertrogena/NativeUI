@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Image } from 'react-native';
 
-export default function App() {
+export default function header() {
   return (
-    <View style={styles.container}>
+    <View style={styles.header}>
       <Text style={styles.Text}> hello habert</Text>
       <StatusBar style="auto" />
      
@@ -12,16 +12,17 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  header: {
+    height: 60,
+    padding:15,
+    backgroundColor: 'green',
+    
   },
 
   Text:{
-    color:'red',
+    color: 'white',
     fontSize:20,
+    textAlign:'center'
   },
   
 });

@@ -11,6 +11,7 @@
   "dependencies": {
     "expo": "~47.0.9",
     "expo-status-bar": "~1.4.2",
+    "random-image-api": "^0.0.4-beta",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-uuid": "^2.0.1",

@@ -1,18 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image } from 'react-native';
+import { StyleSheet, Text, View ,Image ,TouchableOpacity} from 'react-native';
 
-export default function header() {
+export default function ListItem({title}) {
   return (
-    <View style={styles.header}>
-      <Text style={styles.Text}> hello habert</Text>
+    <View style={styles.ListItems}>
+      <Text style={styles.Text}> {title} </Text>
       <StatusBar style="auto" />
      
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
-  header: {
+  ListItems: {
     height: 60,
     padding:15,
     backgroundColor: 'green',

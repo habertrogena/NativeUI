@@ -1,10 +1,24 @@
+import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image } from 'react-native';
+import { StyleSheet, Text, View ,Image ,FlatList} from 'react-native';
+import Header from './components/Header';
+import { GenerateUUID } from 'react-native-uuid';
+import ListItems from './components/ListItems'
 
 export default function App() {
+  const [items,setItems] = useState([
+    {id:1234,Text:'milk'},
+    {id:1234,Text:'Bread'},
+    {id:1234,Text:'Sugar'},
+    {id:1234,Text:'Coffee'},
+    {id:1234,Text:'jam'}
+
+    
+  ])
   return (
     <View style={styles.container}>
-      <Text style={styles.Text}> hello habert</Text>
+      <Header/>
+      <FlatList data={items} renderItem = {({item})=> <ListItems item={item} />}/>
       <StatusBar style="auto" />
      
     </View>
@@ -14,9 +28,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop:60
+
   },
 
   Text:{

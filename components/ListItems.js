@@ -4,13 +4,13 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 
-const ListItems = ({item}) => {
+const ListItems = ({item ,deleteItem }) => {
   return(
     <TouchableOpacity style ={styles.listItem} >
       
       <View style= {styles.listItemView} >
        <Text style= {styles.ItemText} >{item.text} </Text>
-        <FontAwesome  name="remove" size={20} color= 'red' />
+        <FontAwesome  name="remove" size={20} color= 'red' onPress={()=>deleteItem(item.id)} />
       {/** * <Icon name="remove" size={20} color={red} /> */}
       </View>
        

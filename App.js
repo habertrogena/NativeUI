@@ -16,12 +16,17 @@ import ListItems from './components/ListItems'
       {id:uuid(), text:"BlueBand"},
     ])
 
-
+    const deleteItem =(id) =>{
+      setItems(prevItems =>{
+        return prevItems.filter(item=>item.id != id);
+      });
+    }
     return(
       <View style={styles.container} >
         <Header/>
         <FlatList data={items} renderItem={({item})=>(
-          <ListItems item={item} />
+          <ListItems item={item}
+          deleteItem={deleteItem} />
         )} />
       </View>
     )

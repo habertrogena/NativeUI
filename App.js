@@ -4,6 +4,8 @@ import { StyleSheet, Text, View ,Image ,FlatList} from 'react-native';
 import Header from './components/Header';
 import uuid from 'react-uuid';
 
+
+
 import ListItems from './components/ListItems'
 
 
@@ -14,6 +16,7 @@ import ListItems from './components/ListItems'
       {id:uuid(), text:"Sugar"},
       {id:uuid(), text:"Coffee"},
       {id:uuid(), text:"BlueBand"},
+      {id:uuid(), text:"eggs"}
     ])
 
     const deleteItem =(id) =>{
@@ -21,9 +24,13 @@ import ListItems from './components/ListItems'
         return prevItems.filter(item=>item.id != id);
       });
     }
+
+
+    
     return(
       <View style={styles.container} >
         <Header/>
+        
         <FlatList data={items} renderItem={({item})=>(
           <ListItems item={item}
           deleteItem={deleteItem} />

@@ -1,32 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View ,Image ,TouchableOpacity} from 'react-native';
 
-export default function Header({title}) {
-  return (
-    <View style={styles.header}>
-      <Text style={styles.Text}> {title} </Text>
-      <StatusBar style="auto" />
-     
+const Header = ({title}) => {
+  return(
+    <View style ={styles.header} >
+      <Text style = {styles.text} > {title} </Text>
     </View>
-  );
-}
+  )
+};
 
 Header.defaultProps={
-  title:'To Do List'
+  title: "Shopping List"
 }
 
 const styles = StyleSheet.create({
-  header: {
+  header:{
     height: 60,
-    padding:15,
-    backgroundColor: 'green',
-    
+    padding:16,
+    backgroundColor: 'blue'
   },
 
-  Text:{
-    color: 'white',
-    fontSize:20,
-    textAlign:'center'
-  },
-  
+  text:{
+  color: 'white',
+  textAlign:'center',
+  fontSize : 23
+  }
 });
+
+
+export default Header;
